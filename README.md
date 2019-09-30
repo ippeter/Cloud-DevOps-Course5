@@ -1,4 +1,4 @@
-<include [![CircleCI](https://circleci.com/gh/ippeter/lesson5.svg?style=svg)](https://circleci.com/gh/ippeter/lesson5)
+[![CircleCI](https://circleci.com/gh/ippeter/lesson5.svg?style=svg)](https://circleci.com/gh/ippeter/lesson5)
 
 ## Project Overview
 
@@ -34,9 +34,18 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 2. Run in Docker:  `./run_docker.sh`
 3. Run in Kubernetes:  `./run_kubernetes.sh`
 
-### Kubernetes Steps
+### Description of the files in the repository
 
-* Setup and Configure Docker locally
-* Setup and Configure Kubernetes locally
-* Create Flask app in Container
-* Run via kubectl
+* .circleci/config.yml - CircleCI configuration file
+* Dockerfile - instructions how to containerize the app
+* Makefile - instructions how to setup the environment, to lint, etc.
+* README.md - this file ;)
+* app.py - main application body
+* output_txt_files/docker_out.txt - output of the docker container with LOG.info
+* output_txt_files/kubernetes_out.txt - output of launching the app in minikube
+* requirements.txt - list of required libraries for python
+* run_docker.sh - script to build and run the docker container with the app
+* run_kubernetes.sh - script to run the deployment (with the app containerized in the pod) and to do the port forwarding in minikube
+* upload_docker.sh - script to upload the docker container to hub.docker.com
+* make_predictions.sh - script to make actual predictions 
+* model_data/* - directory which contains the prebuilt model
