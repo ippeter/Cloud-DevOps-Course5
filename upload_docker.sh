@@ -10,6 +10,7 @@ dockerpath=ippeter/lesson5
 # Step 2:  
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
+docker tag lesson5 ippeter/lesson5
 docker login -u ippeter
 
 # Step 3:
